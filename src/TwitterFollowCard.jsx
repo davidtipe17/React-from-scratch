@@ -4,9 +4,9 @@ import { useState } from "react";
 // componentes
 //o tener algun tipo de funcionalidad de mejorar el rendiemiento del
 //componente
-export function TwitterFollowCard({ formatUserName, userName, children }) {
+export function TwitterFollowCard({ formatUserName, userName, children, initialIsFollowing}) {
   //guardando la variable
-  const [isFollowing, setIsFollowing] = useState(false);
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
   const text = isFollowing ? "Siguiendo" : "Seguir";
   const buttonClassName = isFollowing
     ? "tw-followCard-button is-following"
